@@ -15,7 +15,7 @@ subject](http://zachholman.com/2010/08/dotfiles-are-meant-to-be-forked/).
 For windows users make sure you are running under admin mode and have bash installed.
 
 ```bash
-curl https://raw.github.com/prabirshrestha/dotfiles/master/install.sh | bash
+curl https://raw.github.com/clwillingham/dotfiles/master/install.sh | bash
 ```
 
 This will clone the repo and symlink the appropriate files in `.dotfiles` to your
