@@ -48,10 +48,6 @@ plugins=(git brew npm nvm jake sublime web-search tmux tmuxinator vundle osx gem
 
 source $ZSH/oh-my-zsh.sh
 
-# remove username@host from the theme
-prompt_context() {
-}
-
 # recommended by brew doctor
 export PATH=/usr/local/bin:$HOME/.dotfiles/bin:$PATH
 
