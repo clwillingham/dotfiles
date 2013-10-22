@@ -39,7 +39,7 @@ for src_path in ~/.dotfiles/*/*.symlink; do
 	skip=false
 	src_basename=`basename "$src_path"`
 	dest_path=`echo "$HOME/.$src_basename" | sed "s/\.symlink$//"`
-
+	echo "$src_path"
 	if [ "$OS" == "windows" ]; then
 		src_path_normalized=`echo ${src_path/$HOME/$CMDHOMEDIR}`
 		dest_path_normalized=`echo "$CMDHOMEDIR\.$src_basename" | sed "s/\.symlink$//"`
