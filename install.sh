@@ -10,7 +10,7 @@ then
 fi
 
 echo "Cloning .dotfiles"
-hash git >/dev/null && /usr/bin/env git clone --recursive https://github.com/prabirshrestha/dotfiles.git ~/.dotfiles || {
+hash git >/dev/null && /usr/bin/env git clone --recursive https://github.com/clwillingham/dotfiles.git ~/.dotfiles || {
   echo "git not installed"
   exit 2
 }
