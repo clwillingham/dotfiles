@@ -1,6 +1,7 @@
 [user]
         name = prabirshrestha
-        email = mail@prabir.me
+	email = clwillingham@gmail.com
+	name = Chris
 [apply]
         whitespace = nowarn
 [alias]
@@ -28,6 +29,7 @@
         untracked = red
 [core]
         autocrlf = false
+	excludesfile = /Users/chriswillingham/.gitignore
 [diff]
         tool = kdiff3
 [difftool]
@@ -48,3 +50,9 @@
         user = prabirshrestha
 [push]
 	default = current
+[difftool "sourcetree"]
+	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
+	path = 
+[mergetool "sourcetree"]
+	cmd = /Applications/SourceTree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
+	trustExitCode = true

@@ -44,7 +44,7 @@ ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew npm nvm jake sublime web-search tmux tmuxinator vundle osx gem gnu-utils mvn urltools vi-mode vagrant bower)
+plugins=(git brew npm nvm jake zsh-syntax-highlighting sublime web-search tmux tmuxinator vundle osx gem gnu-utils mvn urltools vi-mode vagrant bower)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -61,7 +61,12 @@ ANDROID_HOME=$HOME/android-sdk
 export PATH=$PATH:$HOME/scripts:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 alias pra="phonegap run android"
 alias adblogconsole="adb logcat -c && adb logcat | grep Console"
+alias takeover="tmux detach -a"
+alias srvr="python -m SimpleHTTPServer "
+source ~/.rvm/scripts/rvm
 
 for config_file ($HOME/.dotfiles/zsh/**/*.zsh) source $config_file
 # DO NOT EDIT BELOW THIS LINE
 
+
+PATH=/Applications/MAMP/bin/php/php5.4.19/bin:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
