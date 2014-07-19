@@ -44,9 +44,10 @@ ZSH_THEME="agnoster"
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
-plugins=(git brew npm nvm jake sublime web-search tmux tmuxinator vundle osx gem gnu-utils mvn urltools vi-mode vagrant bower)
+plugins=(git brew npm nvm jake sublime web-search tmux tmuxinator vundle osx gem gnu-utils mvn urltools vi-mode vagrant ruby rails rake)
 
 source $ZSH/oh-my-zsh.sh
+source  ~/zsh-custom/zsh-syntax-highlighting/zsh-syntax-highlighting.plugin.zsh
 
 # recommended by brew doctor
 export PATH=/usr/local/bin:$HOME/.dotfiles/bin:$PATH
@@ -55,7 +56,7 @@ export PATH=/usr/local/bin:$HOME/.dotfiles/bin:$PATH
 bindkey -v
 bindkey -M viins 'jj' vi-cmd-mode
 
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 
 ANDROID_HOME=$HOME/android-sdk
 export PATH=$PATH:$HOME/scripts:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
@@ -65,3 +66,5 @@ alias adblogconsole="adb logcat -c && adb logcat | grep Console"
 for config_file ($HOME/.dotfiles/zsh/**/*.zsh) source $config_file
 # DO NOT EDIT BELOW THIS LINE
 
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
