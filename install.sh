@@ -3,17 +3,17 @@
 
 set -e
 
-if [ -d ~/.dotfiles ]
-then
-  echo "You already have .dotfiles installed. You'll need to remove ~/.dotfiles if you want to install"
-  exit 1
-fi
+#if [ -d ~/.dotfiles ]
+#then
+#  echo "You already have .dotfiles installed. You'll need to remove ~/.dotfiles if you want to install"
+#  exit 1
+#fi
 
-echo "Cloning .dotfiles"
-hash git >/dev/null && /usr/bin/env git clone --recursive https://github.com/clwillingham/dotfiles.git ~/.dotfiles || {
-  echo "git not installed"
-  exit 2
-}
+#echo "Cloning .dotfiles"
+#hash git >/dev/null && /usr/bin/env git clone --recursive https://github.com/clwillingham/dotfiles.git ~/.dotfiles || {
+#  echo "git not installed"
+#  exit 2
+#}
 
 UNAME=$(uname)
 OS=

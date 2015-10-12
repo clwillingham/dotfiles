@@ -47,6 +47,7 @@ ZSH_THEME="agnoster"
 plugins=(git brew npm nvm jake zsh-syntax-highlighting sublime web-search tmux tmuxinator vundle osx gem gnu-utils mvn urltools vi-mode vagrant bower)
 
 source $ZSH/oh-my-zsh.sh
+source $HOME/.zsh-custom/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 # recommended by brew doctor
 export PATH=/usr/local/bin:$HOME/.dotfiles/bin:$PATH
@@ -57,16 +58,22 @@ bindkey -M viins 'jj' vi-cmd-mode
 
 eval "$(rbenv init -)"
 
-ANDROID_HOME=$HOME/android-sdk
+ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$HOME/scripts:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
 alias pra="phonegap run android"
 alias adblogconsole="adb logcat -c && adb logcat | grep Console"
 alias takeover="tmux detach -a"
 alias srvr="python -m SimpleHTTPServer "
+alias vi=vim
 source ~/.rvm/scripts/rvm
 
 for config_file ($HOME/.dotfiles/zsh/**/*.zsh) source $config_file
 # DO NOT EDIT BELOW THIS LINE
 
 
-PATH=/Applications/MAMP/bin/php/php5.4.19/bin:$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+PATH="/usr/local/heroku/bin:$PATH"
+source ~/.nvm/nvm.sh
+
+#github
+eval "$(hub alias -s)"
