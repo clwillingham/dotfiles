@@ -56,24 +56,29 @@ export PATH=/usr/local/bin:$HOME/.dotfiles/bin:$PATH
 bindkey -v
 bindkey -M viins 'jj' vi-cmd-mode
 
-eval "$(rbenv init -)"
+#eval "$(rbenv init -)"
 
 ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$HOME/scripts:$ANDROID_HOME/tools:$ANDROID_HOME/platform-tools
-alias pra="phonegap run android"
+#alias pra="phonegap run android"
 alias adblogconsole="adb logcat -c && adb logcat | grep Console"
 alias takeover="tmux detach -a"
-alias srvr="python -m SimpleHTTPServer "
+alias s="python -m SimpleHTTPServer "
 alias vi=vim
-source ~/.rvm/scripts/rvm
+alias tmux="tmux -u"
+alias sp2="sudo ln -f /usr/bin/python2 /usr/bin/python"
+alias sp3="sudo ln -f /usr/bin/python3 /usr/bin/python"
+autoload -U zmv
+alias mmv='noglob zmv -W'
+#source ~/.rvm/scripts/rvm
 
 for config_file ($HOME/.dotfiles/zsh/**/*.zsh) source $config_file
 # DO NOT EDIT BELOW THIS LINE
 
 
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
-PATH="/usr/local/heroku/bin:$PATH"
-source ~/.nvm/nvm.sh
+#PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+#PATH="/usr/local/heroku/bin:$PATH"
+#source ~/.nvm/nvm.sh
 
 #github
-eval "$(hub alias -s)"
+#eval "$(hub alias -s)"
